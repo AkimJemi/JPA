@@ -2,17 +2,15 @@ package com.pro.spring.entity;
 
 import java.time.LocalDateTime;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user22")
+@Table(name = "users")
 public class UserEntity {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
     private String name;
 
@@ -22,8 +20,7 @@ public class UserEntity {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    public UserEntity(String id, String name, LocalDateTime createdAt, LocalDateTime updatedAt) {
-        this.id = id;
+    public UserEntity(String name, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.name = name;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
