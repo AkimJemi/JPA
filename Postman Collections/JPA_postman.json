@@ -9,7 +9,7 @@
 			"name": "UserController",
 			"item": [
 				{
-					"name": "1.addUsers",
+					"name": "1.insertAllUsers",
 					"id": "c93525f1-619d-4430-9d66-d0d7741001c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -31,13 +31,13 @@
 					"response": []
 				},
 				{
-					"name": "1.addUsers Copy",
+					"name": "1.insertAllUsers",
 					"id": "09f01760-9908-4d63-880e-cdb94880993a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -48,7 +48,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/post/batch"
+						"url": "http://localhost:8081/get/batch"
 					},
 					"response": []
 				},
@@ -59,7 +59,7 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -70,7 +70,7 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/"
+						"url": "http://localhost:8081/post/user/insert"
 					},
 					"response": []
 				}
