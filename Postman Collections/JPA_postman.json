@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "9fafe1f5-5b64-4721-adbf-9a5bfe12bf70",
 		"name": "JPA",
+		"description": "[https://github.com/AkimJemi/JPA](https://github.com/AkimJemi/JPA)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -19,7 +20,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"name\": \"Alice Smith\"\r\n    },\r\n    {\r\n        \"name\": \"Bob Johnson\"\r\n    },\r\n    {\r\n        \"name\": \"Charlie Brown\"\r\n    }\r\n]",
+							"raw": "[\r\n    {\r\n        \"id\": \"5\"\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -27,6 +28,28 @@
 							}
 						},
 						"url": "http://localhost:8081/user/batch/post"
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"id": "3199b884-b4c8-4283-a8be-509542d5b6cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/user/login"
 					},
 					"response": []
 				},
@@ -142,9 +165,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": "http://localhost:8081/account/findAll"
+						"url": "http://localhost:8081/account/batch/put"
 					},
 					"response": []
 				},
@@ -155,9 +178,109 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "POST",
+						"header": [],
+						"url": "http://localhost:8081/account/batch/post"
+					},
+					"response": []
+				},
+				{
+					"name": "findAccountById",
+					"id": "3492c000-33ab-4c42-836d-220e006be0bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/account/find?id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountById",
+					"id": "241d5a38-7ca7-4dc0-ba98-88031ee84619",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"userId\": \"T\",\r\n    \"accountNumber\": 2415283920195,\r\n    \"accountName\": \"三井住友銀行\",\r\n    \"balance\": 125000,\r\n    \"accountType\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/account/update"
+					},
+					"response": []
+				},
+				{
+					"name": "findAllAccounts",
+					"id": "1c0f0448-beb9-491f-8a2d-8b9a849331f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
 						"header": [],
 						"url": "http://localhost:8081/account/findAll"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccountById",
+					"id": "2f6152b3-a832-47be-a649-e0ac851923c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/account/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllAccounts",
+					"id": "9d1af548-1eda-44d2-8b91-49ae4e591ee1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8081/account/deleteAll"
 					},
 					"response": []
 				}
