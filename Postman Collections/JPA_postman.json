@@ -142,9 +142,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"url": "http://localhost:8081/account/findAll"
+						"url": "http://localhost:8081/account/batch/put"
 					},
 					"response": []
 				},
@@ -155,9 +155,9 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "PUT",
+						"method": "POST",
 						"header": [],
-						"url": "http://localhost:8081/account/findAll"
+						"url": "http://localhost:8081/account/batch/post"
 					},
 					"response": []
 				}
