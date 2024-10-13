@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "9fafe1f5-5b64-4721-adbf-9a5bfe12bf70",
+		"name": "JPA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1.addUsers",
+			"id": "c93525f1-619d-4430-9d66-d0d7741001c0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Alice Smith\"\r\n    },\r\n    {\r\n        \"name\": \"Bob Johnson\"\r\n    },\r\n    {\r\n        \"name\": \"Charlie Brown\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/batch"
+			},
+			"response": []
+		},
+		{
+			"name": "2.addUser",
+			"id": "80db086f-8772-4fb6-ad1d-d91ec5935b94",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"userName\": \"Alice Smith\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8081/"
+			},
+			"response": []
+		}
+	]
+}
