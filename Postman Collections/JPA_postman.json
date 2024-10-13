@@ -131,6 +131,38 @@
 				}
 			],
 			"id": "b679151f-8a71-46c7-a350-420a304ea83e"
+		},
+		{
+			"name": "AccountController",
+			"item": [
+				{
+					"name": "batchAllAccounts",
+					"id": "67848d7c-6cc7-444e-9b12-83383505fc82",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/account/findAll"
+					},
+					"response": []
+				},
+				{
+					"name": "batchAllAccounts",
+					"id": "8ba4483f-23f7-4c20-904d-4e92053191a2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:8081/account/findAll"
+					},
+					"response": []
+				}
+			],
+			"id": "1c4c8853-a45e-45ee-af8f-910dc8e9e9cc"
 		}
 	]
 }
