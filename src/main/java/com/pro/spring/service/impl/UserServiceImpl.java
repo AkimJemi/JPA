@@ -6,6 +6,8 @@ import com.pro.spring.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
 
@@ -18,7 +20,12 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void save(UserEntity userEntity) {
-        userHandler.save(userEntity);
+    public UserEntity save(UserEntity user) {
+        return userHandler.save(user);
+    }
+
+    @Override
+    public List<UserEntity> saveAll(List<UserEntity> users) {
+        return userHandler.saveAll(users);
     }
 }

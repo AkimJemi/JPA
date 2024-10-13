@@ -2,6 +2,10 @@ package com.pro.spring.handler;
 
 import com.pro.spring.entity.UserEntity;
 
+import java.util.List;
+
 public interface UserHandler {
-    void save(UserEntity userEntity);
+    UserEntity save(UserEntity userEntity);
+
+    List<UserEntity> saveAll(List<UserEntity> users);
 }

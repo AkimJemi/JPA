@@ -6,6 +6,8 @@ import com.pro.spring.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserHandlerImpl implements UserHandler {
 
@@ -17,7 +19,12 @@ public class UserHandlerImpl implements UserHandler {
     }
 
     @Override
-    public void save(UserEntity userEntity) {
-        userRepository.save(userEntity);
+    public UserEntity save(UserEntity userEntity) {
+        return userRepository.save(userEntity);
+    }
+
+    @Override
+    public List<UserEntity> saveAll(List<UserEntity> users) {
+        return userRepository.saveAll(users);
     }
 }
