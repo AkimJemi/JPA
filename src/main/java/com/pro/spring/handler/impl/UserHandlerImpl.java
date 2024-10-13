@@ -29,7 +29,7 @@ public class UserHandlerImpl implements UserHandler {
     }
 
     @Override
-    public UserEntity findUserById(int id) {
+    public UserEntity findUserById(Long id) {
         return userRepository.findUserById(id);
     }
 
@@ -39,7 +39,7 @@ public class UserHandlerImpl implements UserHandler {
     }
 
     @Override
-    public UserEntity deleteUserById(int id) {
+    public UserEntity deleteUserById(Long id) {
         userRepository.deleteById(String.valueOf(id));
         return userRepository.findUserById(id);
     }

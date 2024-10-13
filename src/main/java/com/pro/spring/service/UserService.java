@@ -10,11 +10,11 @@ public interface UserService {
 
     List<UserEntity> saveAll(List<UserEntity> users);
 
-    UserEntity findUserById(int id);
+    UserEntity findUserById(Long id);
 
     List<UserEntity> findAllUser();
 
-    UserEntity deleteUserById(int id);
+    UserEntity deleteUserById(Long id);
 
     List<UserEntity> deleteAllUser();
 }

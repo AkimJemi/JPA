@@ -1,8 +1,12 @@
 package com.pro.spring.controller;
 
+import com.pro.spring.entity.AccountEntity;
 import com.pro.spring.entity.UserEntity;
 import com.pro.spring.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +23,16 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
+    }
+
+    @PostMapping("/user/login")
+    public ResponseEntity<UserEntity> login(@RequestBody UserEntity userEntity, HttpServletRequest rq) {
+        UserEntity user = userService.findUserById(userEntity.getId());
+        if (user == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        rq.getSession().setAttribute("loginUser", user);
+        return ResponseEntity.ok(user);
     }
 
     @PostMapping("/user/insert")
@@ -41,7 +55,7 @@ public class UserController {
     }
 
     @GetMapping("/user/find")
-    public ResponseEntity<UserEntity> findUserById(int id) {
+    public ResponseEntity<UserEntity> findUserById(Long id) {
         UserEntity user = userService.findUserById(id);
         return ResponseEntity.ok(user);
     }
@@ -53,7 +67,7 @@ public class UserController {
     }
 
     @DeleteMapping("/user/delete")
-    public ResponseEntity<UserEntity> deleteUserById(int id) {
+    public ResponseEntity<UserEntity> deleteUserById(Long id) {
         UserEntity user = userService.deleteUserById(id);
         return ResponseEntity.ok(user);
     }

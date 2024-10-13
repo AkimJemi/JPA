@@ -30,7 +30,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserEntity findUserById(int id) {
+    public UserEntity findUserById(Long id) {
         return userHandler.findUserById(id);
     }
 
@@ -40,7 +40,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public UserEntity deleteUserById(int id) {
+    public UserEntity deleteUserById(Long id) {
         return userHandler.deleteUserById(id);
     }
 
