@@ -39,7 +39,7 @@
 					"request": {
 						"method": "PUT",
 						"header": [],
-						"url": "http://localhost:8081/user/batch/get"
+						"url": "http://localhost:8081/user/batch/put"
 					},
 					"response": []
 				},
