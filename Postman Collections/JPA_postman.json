@@ -225,7 +225,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": 1,\r\n    \"userId\": \"A\"\r\n}",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"userId\": \"T\",\r\n    \"accountNumber\": 2415283920195,\r\n    \"accountName\": \"三井住友銀行\",\r\n    \"balance\": 125000,\r\n    \"accountType\": null\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -233,6 +233,54 @@
 							}
 						},
 						"url": "http://localhost:8081/account/update"
+					},
+					"response": []
+				},
+				{
+					"name": "findAllAccounts",
+					"id": "1c0f0448-beb9-491f-8a2d-8b9a849331f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/account/findAll"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAccountById",
+					"id": "2f6152b3-a832-47be-a649-e0ac851923c3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    id:5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/account/delete"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllAccounts",
+					"id": "9d1af548-1eda-44d2-8b91-49ae4e591ee1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8081/account/deleteAll"
 					},
 					"response": []
 				}
