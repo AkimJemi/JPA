@@ -41,7 +41,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"id\": 5\r\n    }\r\n]",
+							"raw": "{\r\n    \"id\": 1\r\n}\r\n",
 							"options": {
 								"raw": {
 									"language": "json"
