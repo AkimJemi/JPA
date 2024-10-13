@@ -2,6 +2,7 @@
 	"info": {
 		"_postman_id": "9fafe1f5-5b64-4721-adbf-9a5bfe12bf70",
 		"name": "JPA",
+		"description": "[https://github.com/AkimJemi/JPA](https://github.com/AkimJemi/JPA)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
