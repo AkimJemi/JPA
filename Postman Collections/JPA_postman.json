@@ -37,17 +37,8 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "GET",
+						"method": "PUT",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"name\": \"Alice Smith\"\r\n    },\r\n    {\r\n        \"name\": \"Bob Johnson\"\r\n    },\r\n    {\r\n        \"name\": \"Charlie Brown\"\r\n    }\r\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": "http://localhost:8081/user/batch/get"
 					},
 					"response": []
@@ -61,15 +52,6 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"userName\": \"Alice Smith\"\r\n    }\r\n]",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "http://localhost:8081/user/find?id=0",
 							"protocol": "http",
@@ -88,6 +70,62 @@
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllUser",
+					"id": "925ab00f-8a94-4cef-a515-d3b12b7cf6cc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8081/user/findAll"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserById",
+					"id": "fd1e5ed6-2404-43d5-a244-598822aa9e83",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/user/delete?id=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllUsers",
+					"id": "71524638-3bf8-419b-bcc7-5b76b90bd608",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8081/user/deleteAll"
 					},
 					"response": []
 				}
