@@ -8,4 +8,12 @@ public interface UserHandler {
     UserEntity save(UserEntity userEntity);
 
     List<UserEntity> saveAll(List<UserEntity> users);
+
+    UserEntity findUserById(int id);
+
+    List<UserEntity> findAllUser();
+
+    UserEntity deleteUserById(int id);
+
+    List<UserEntity> deleteAllUser();
 }

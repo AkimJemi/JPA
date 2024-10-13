@@ -28,4 +28,24 @@ public class UserServiceImpl implements UserService {
     public List<UserEntity> saveAll(List<UserEntity> users) {
         return userHandler.saveAll(users);
     }
+
+    @Override
+    public UserEntity findUserById(int id) {
+        return userHandler.findUserById(id);
+    }
+
+    @Override
+    public List<UserEntity> findAllUser() {
+        return userHandler.findAllUser();
+    }
+
+    @Override
+    public UserEntity deleteUserById(int id) {
+        return userHandler.deleteUserById(id);
+    }
+
+    @Override
+    public List<UserEntity> deleteAllUser() {
+        return userHandler.deleteAllUser();
+    }
 }

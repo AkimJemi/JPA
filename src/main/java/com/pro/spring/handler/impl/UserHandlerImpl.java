@@ -27,4 +27,26 @@ public class UserHandlerImpl implements UserHandler {
     public List<UserEntity> saveAll(List<UserEntity> users) {
         return userRepository.saveAll(users);
     }
+
+    @Override
+    public UserEntity findUserById(int id) {
+        return userRepository.findUserById(id);
+    }
+
+    @Override
+    public List<UserEntity> findAllUser() {
+        return userRepository.findAll();
+    }
+
+    @Override
+    public UserEntity deleteUserById(int id) {
+        userRepository.deleteById(String.valueOf(id));
+        return userRepository.findUserById(id);
+    }
+
+    @Override
+    public List<UserEntity> deleteAllUser() {
+        userRepository.deleteAll();
+        return userRepository.findAll();
+    }
 }
