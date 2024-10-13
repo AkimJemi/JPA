@@ -9,7 +9,7 @@
 			"name": "UserController",
 			"item": [
 				{
-					"name": "1.insertAllUsers",
+					"name": "batchAllUsers",
 					"id": "c93525f1-619d-4430-9d66-d0d7741001c0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -26,12 +26,12 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/post/batch"
+						"url": "http://localhost:8081/user/batch/post"
 					},
 					"response": []
 				},
 				{
-					"name": "1.insertAllUsers",
+					"name": "batchAllUsers",
 					"id": "09f01760-9908-4d63-880e-cdb94880993a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -48,18 +48,18 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/get/batch"
+						"url": "http://localhost:8081/user/batch/get"
 					},
 					"response": []
 				},
 				{
-					"name": "2.addUser",
+					"name": "findUserById",
 					"id": "80db086f-8772-4fb6-ad1d-d91ec5935b94",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
 						"body": {
 							"mode": "raw",
@@ -70,7 +70,24 @@
 								}
 							}
 						},
-						"url": "http://localhost:8081/post/user/insert"
+						"url": {
+							"raw": "http://localhost:8081/user/find?id=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"user",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0"
+								}
+							]
+						}
 					},
 					"response": []
 				}
