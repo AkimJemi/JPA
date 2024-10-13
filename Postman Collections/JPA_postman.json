@@ -19,7 +19,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "[\r\n    {\r\n        \"name\": \"Alice Smith\"\r\n    },\r\n    {\r\n        \"name\": \"Bob Johnson\"\r\n    },\r\n    {\r\n        \"name\": \"Charlie Brown\"\r\n    }\r\n]",
+							"raw": "[\r\n    {\r\n        \"id\": \"5\"\r\n    }\r\n]",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -27,6 +27,28 @@
 							}
 						},
 						"url": "http://localhost:8081/user/batch/post"
+					},
+					"response": []
+				},
+				{
+					"name": "userLogin",
+					"id": "3199b884-b4c8-4283-a8be-509542d5b6cd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"id\": 5\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8081/user/login"
 					},
 					"response": []
 				},
