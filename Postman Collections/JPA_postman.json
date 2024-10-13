@@ -183,6 +183,66 @@
 						"url": "http://localhost:8081/account/batch/post"
 					},
 					"response": []
+				},
+				{
+					"name": "findAccountById",
+					"id": "3492c000-33ab-4c42-836d-220e006be0bc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/account/find?id=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"find"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAccountById",
+					"id": "241d5a38-7ca7-4dc0-ba98-88031ee84619",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/account/update?id=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"account",
+								"update"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "1c4c8853-a45e-45ee-af8f-910dc8e9e9cc"
