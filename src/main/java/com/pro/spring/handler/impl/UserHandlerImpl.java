@@ -3,20 +3,16 @@ package com.pro.spring.handler.impl;
 import com.pro.spring.entity.UserEntity;
 import com.pro.spring.handler.UserHandler;
 import com.pro.spring.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class UserHandlerImpl implements UserHandler {
 
-    UserRepository userRepository;
-
-    @Autowired
-    public UserHandlerImpl(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
+    final private UserRepository userRepository;
 
     @Override
     public UserEntity save(UserEntity userEntity) {

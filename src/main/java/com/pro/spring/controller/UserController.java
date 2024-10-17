@@ -1,10 +1,9 @@
 package com.pro.spring.controller;
 
-import com.pro.spring.entity.AccountEntity;
 import com.pro.spring.entity.UserEntity;
 import com.pro.spring.service.UserService;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,14 +15,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Controller
+@RequiredArgsConstructor
 public class UserController {
 
-    UserService userService;
-
-    @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
+    private final UserService userService;
 
     @PostMapping("/user/login")
     public ResponseEntity<UserEntity> login(@RequestBody UserEntity userEntity, HttpServletRequest rq) {

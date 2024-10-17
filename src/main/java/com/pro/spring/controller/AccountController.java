@@ -2,7 +2,7 @@ package com.pro.spring.controller;
 
 import com.pro.spring.entity.AccountEntity;
 import com.pro.spring.service.AccountService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,14 +12,10 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 @Controller
+@RequiredArgsConstructor
 public class AccountController {
 
-    AccountService accountService;
-
-    @Autowired
-    public AccountController(AccountService accountService) {
-        this.accountService = accountService;
-    }
+    private final AccountService accountService;
 
     @PutMapping("/account/batch/put")
     public ResponseEntity<List<AccountEntity>> batchAllAccounts() {

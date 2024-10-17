@@ -3,21 +3,17 @@ package com.pro.spring.service.impl;
 import com.pro.spring.entity.AccountEntity;
 import com.pro.spring.handler.AccountHandler;
 import com.pro.spring.service.AccountService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class AccountServiceImpl implements AccountService {
 
-    AccountHandler accountHandler;
-
-    @Autowired
-    public AccountServiceImpl(AccountHandler accountHandler) {
-        this.accountHandler = accountHandler;
-    }
-
+    private final AccountHandler accountHandler;
 
     @Override
     public AccountEntity save(AccountEntity account) {

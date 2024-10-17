@@ -6,23 +6,20 @@ import com.pro.spring.repository.AccountRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class AccountHandlerImpl implements AccountHandler {
 
-    AccountRepository accountRepository;
+    private final AccountRepository accountRepository;
 
     @PersistenceContext
     private EntityManager entityManager;
-
-    @Autowired
-    public AccountHandlerImpl(AccountRepository accountRepository) {
-        this.accountRepository = accountRepository;
-    }
 
     @Override
     public AccountEntity save(AccountEntity accountEntity) {
